@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynasty RolePlay - GTA V RageMP Server</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/lucide-icons/dist/umd/lucide-icons.js">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Dynasty RP</div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#jobs" class="nav-link">Jobs</a>
+                <a href="#vehicles" class="nav-link">Fahrzeuge</a>
+                <a href="#gallery" class="nav-link">Galerie</a>
+                <button class="connect-btn">Server Beitreten</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <header id="home" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="server-status online">
+                    <span class="status-dot"></span>
+                    Server Online: 0/5000 Spieler
+                </div>
+                <h1>Dynasty RolePlay</h1>
+                <p class="hero-subtitle"></p>
+                <div class="hero-buttons">
+                    <button class="btn-primary">
+                        <i data-lucide="play" class="btn-icon"></i>
+                        Jetzt Spielen
+                    </button>
+                    <button class="btn-secondary" onclick="window.location.href='https://discord.gg/jcU5SU8VUq';">
+                        <i data-lucide="message-circle" class="btn-icon"></i>
+                        Discord Beitreten
+                    </button>                    
+                </div>
+            </div>
+            <div class="hero-video-overlay"></div>
+            <video id="hero-video" autoplay loop muted playsinline class="hero-video">
+                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4">
+            </video>
+            
+            <script>
+              const video = document.getElementById('hero-video');
+              video.currentTime = 16; // Video beginnt ab Sekunde 16
+              video.play(); // Sicherstellen, dass das Video abgespielt wird
+            </script>            
+        </header>
+
+        <!-- Server Highlights -->
+        <section class="server-highlights">
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-icon">🎮</div>
+                    <h3>Eigene Wirtschaft</h3>
+                    <p>Dynamisches Wirtschaftssystem mit Spieler-gesteuertem Markt</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">🏠</div>
+                    <h3>Immobilien</h3>
+                    <p>Kaufe und gestalte dein eigenes Zuhause</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">💼</div>
+                    <h3>Firmen</h3>
+                    <p>Gründe dein eigenes Unternehmen</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">🎯</div>
+                    <h3>Events</h3>
+                    <p>Tägliche Events mit tollen Preisen</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <h2 class="section-title">Unsere Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i data-lucide="users" class="feature-icon"></i>
+                    <h3>Aktive Community</h3>
+                    <p>Werde Teil unserer lebendigen Community mit hunderten aktiven Spielern.</p>
+                    <div class="feature-stats">24/7 aktiv</div>
+                </div>
+                <div class="feature-card">
+                    <i data-lucide="gamepad" class="feature-icon"></i>
+                    <h3>Einzigartiges Gameplay</h3>
+                    <p>Erlebe maßgeschneiderte Systeme und einzigartige Spielmechaniken.</p>
+                    <div class="feature-stats">100+ Features</div>
+                </div>
+                <div class="feature-card highlight">
+                    <i data-lucide="shield" class="feature-icon"></i>
+                    <h3>Faire Administration</h3>
+                    <p>Unser erfahrenes Team sorgt für ein faires Spielerlebnis. und euch bei allem zu Helfen.</p>
+                    <div class="feature-stats">50+ Team Mitglieder</div>
+                </div>
+                <div class="feature-card">
+                    <i data-lucide="server" class="feature-icon"></i>
+                    <h3>Stabile Server</h3>
+                    <p>Hochleistungsserver für ein reibungsloses Spielerlebnis.</p>
+                    <div class="feature-stats">99.9% Uptime</div>
+                </div>
+                <div class="feature-card">
+                    <i data-lucide="message-square" class="feature-icon"></i>
+                    <h3>Support 24/7</h3>
+                    <p>Rund um die Uhr Support durch unser engagiertes Team. [IC]</p>
+                    <div class="feature-stats">5min Antwortzeit</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jobs Section -->
+        <section id="jobs" class="jobs">
+            <h2 class="section-title">Karrieremöglichkeiten</h2>
+            <div class="jobs-grid">
+                <div class="job-card police">
+                    <div class="job-icon">👮</div>
+                    <h3>Polizei</h3>
+                    <p>Sorge für Recht und Ordnung in der Stadt</p>
+                    <ul class="job-features">
+                        <li>Eigene Dienstgrade</li>
+                        <li>Spezialeinheiten</li>
+                        <li>Exklusive Fahrzeuge</li>
+                    </ul>
+                </div>
+                <div class="job-card medic">
+                    <div class="job-icon">🚑</div>
+                    <h3>Sanitäter</h3>
+                    <p>Rette Leben und hilf anderen Spielern</p>
+                    <ul class="job-features">
+                        <li>Notfallsystem</li>
+                        <li>Krankenhaus Management</li>
+                        <li>Medizinische Forschung</li>
+                    </ul>
+                </div>
+                <div class="job-card mechanic">
+                    <div class="job-icon">🔫</div>
+                    <h3>Gangs</h3>
+                    <p>Werde Krimminell und übernehme die Stadt.</p>
+                    <ul class="job-features">
+                        <li>Feste Anwesen</li>
+                        <li>Viele Gang Fahrezeuge</li>
+                        <li>Gute Geld Möglichkeiten</li>
+                    </ul>
+                </div>
+                <div class="job-card mafia">
+                    <div class="job-icon">👥</div>
+                    <h3>Eigenes Leben</h3>
+                    <p>Tuhe das auf was du Lust hast</p>
+                    <ul class="job-features">
+                        <li>Viel Freiheit</li>
+                        <li>Viele Entscheidungen</li>
+                        <li>Viel mehr Zeit</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vehicles Section -->
+        <section id="vehicles" class="vehicles">
+            <h2 class="section-title">Premium Fahrzeuge</h2>
+            <div class="vehicles-showcase">
+                <div class="vehicle-card">
+                    <div class="vehicle-image" style="background-image: url('https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80')"></div>
+                    <div class="vehicle-info">
+                        <h3>Luxury Sports</h3>
+                        <div class="vehicle-stats">
+                            <div class="stat">
+                                <span>Geschwindigkeit</span>
+                                <div class="stat-bar"><div class="stat-fill" style="width: 95%"></div></div>
+                            </div>
+                            <div class="stat">
+                                <span>Handling</span>
+                                <div class="stat-bar"><div class="stat-fill" style="width: 90%"></div></div>
+                            </div>
+                            <div class="stat">
+                                <span>Beschleunigung</span>
+                                <div class="stat-bar"><div class="stat-fill" style="width: 88%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-image" style="background-image: url('https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80')"></div>
+                    <div class="vehicle-info">
+                        <h3>Muscle Car</h3>
+                        <div class="vehicle-stats">
+                            <div class="stat">
+                                <span>Geschwindigkeit</span>
+                                <div class="stat-bar"><div class="stat-fill" style="width: 85%"></div></div>
+                            </div>
+                            <div class="stat">
+                                <span>Handling</span>
+                                <div class="stat-bar"><div class="stat-fill" style="width: 75%"></div></div>
+                            </div>
+                            <div class="stat">
+                                <span>Beschleunigung</span>
+                                <div class="stat-bar"><div class="stat-fill" style="width: 92%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery">
+            <h2 class="section-title">Galerie</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" style="background-image: url('https://th.bing.com/th/id/OIP.Q_B9VguXMEHeKWqNpgiogwHaFR?rs=1&pid=ImgDetMain')">
+                    <div class="gallery-overlay">
+                        <h3>Luxus Apartments</h3>
+                        <p>Erstklassiges Wohnungen</p>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://img.gta5-mods.com/q95-w550-h275-cfill/images/bmw-m5-f90-2018-add-on-hq-template/405e25-wmplayer%202018-01-05%2017-41-07-16.png')">
+                    <div class="gallery-overlay">
+                        <h3>Exklusive Fahrzeuge</h3>
+                        <p>Die schnellsten Wagen der Stadt</p>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80')">
+                    <div class="gallery-overlay">
+                        <h3>Dynasty Admin-Team</h3>
+                        <p>Das Dynasty Admin-Team wird euch bei Allem Helfen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-count="50">10</div>
+                    <div class="stat-label">Aktive Fraktionen</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Server Uptime</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="reviews">
+            <h2 class="section-title">Spielerstimmen</h2>
+            <div class="reviews-slider">
+                <div class="review-card">
+                    <div class="review-avatar">👤</div>
+                    <div class="review-content">
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        <p>Ziemlich gute Website</p>
+                        <div class="review-author">Gustavo Pinguin</div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-avatar">👤</div>
+                    <div class="review-content">
+                        <div class="review-stars">⭐⭐⭐⭐</div>
+                        <p>Sieht Geil aus</p>
+                        <div class="review-author">Maja Summer</div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-avatar">👤</div>
+                    <div class="review-content">
+                        <div class="review-stars">⭐⭐⭐⭐</div>
+                        <p>Ziemlich Übersichtlich</p>
+                        <div class="review-author">Mexi White</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="cta-content">
+                <h2>Bereit zum Spielen?</h2>
+                <p></p>
+                <div class="cta-buttons">
+                    <button class="btn-primary">Server Beitreten</button>
+                    <button class="btn-secondary" onclick="window.location.href='https://discord.gg/jcU5SU8VUq';">
+                        Discord Beitreten
+                    </button>                    
+                </div>
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <i data-lucide="check-circle" class="cta-icon"></i>
+                        <span>Sofortiger Zugang</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i data-lucide="heart" class="cta-icon"></i>
+                        <span>Freundliche Community</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i data-lucide="gift" class="cta-icon"></i>
+                        <span>Starter Bonus</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Dynasty RolePlay</h3>
+                    <p></p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/lennydynasty/" class="social-link" target="_blank">
+                            <span class="text"></span>
+                            <i data-lucide="instagram" class="icon"></i>
+                        </a>
+                        <a href="https://www.instagram.com/dynastyleandro/" class="social-link" target="_blank">
+                            <i data-lucide="instagram" class="icon"></i>
+                            <span class="text"></span>
+                        </a>                                         
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Links</h3>
+                    <a href="https://discord.com/channels/1340405004904829112/1340443490592620667">Regeln</a>
+                    <a href="https://images.squarespace-cdn.com/content/v1/591fd77d29687fd09cca478b/1555546030336-YXVPG30KTCM92JW89UTL/ke17ZwdGBToddI8pDm48kDrQ9tfdcvPUv7NgXGP4R2R7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0gmXcXvEVFTLbYX9CdVcGe4zwrosjp5YtnrvbmlM1LFKb7wNXE8lRZ0Z8l5PIsW3Vw/AdobeStock_139559217.jpeg">Forum</a>
+                </div>
+                <div class="footer-section">
+                    <h3></h3>
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Du hast Fragen?</h3>
+                    <a href="mailto:support@gta5dynasty.com" class="contact-email">support@gta5dynasty.com</a>
+                </div>    
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Dynasty RolePlay. ist nicht mit Take-Two, Rockstar North Interactive oder anderen Rechteinhabern verbunden oder wird von diesen unterstützt. Alle verwendeten Warenzeichen gehören ihren jeweiligen Eigentümern.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.feature-card, .job-card, .gallery-item, .stat-card, .review-card').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
